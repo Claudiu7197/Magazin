@@ -23,6 +23,11 @@ public class Produs implements Comparable<Produs>{
         this.pret = pret;
     }
 
+    public int getPret()
+    {
+        return pret;
+    }
+
     @Override
     public String toString()
     {
