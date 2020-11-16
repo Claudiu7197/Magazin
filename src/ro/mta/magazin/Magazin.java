@@ -10,6 +10,15 @@ public class Magazin {
         Collections.sort(produse);
     }
     public Magazin() { produse = new ArrayList<Produs>();}
+
+    public ArrayList<Produs> getProduse() {
+        return produse;
+    }
+
+    public void setProduse(ArrayList<Produs> produse) {
+        this.produse = produse;
+    }
+
     public Magazin(ArrayList<Produs> produse) {
         produse = new ArrayList<Produs>();
         for (Produs p : produse) {
