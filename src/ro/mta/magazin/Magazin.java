@@ -32,10 +32,14 @@ public class Magazin {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("Magazinul contine \n");
+        builder.append("Produsele urmatoare sunt la super pret mai mic de 10 lei!!! \n");
         for (Produs p : produse) {
-            builder.append(p.toString());
-            builder.append("\n");
+            if(p.getPret()<=10) {
+                builder.append(p.getNume());
+                builder.append(" la pretul de ");
+                builder.append(p.getPret());
+                builder.append(".\n");
+            }
         }
 
         return builder.toString();
