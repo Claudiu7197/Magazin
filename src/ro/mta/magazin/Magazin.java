@@ -32,6 +32,16 @@ public class Magazin {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
+        builder.append("Magazinul contine produse cu valoarea mai mare de 10 lei: \n");
+        for (Produs p : produse) {
+            if(p.getPret()>10) {
+                builder.append(p.getNume());
+                builder.append(" la pretul de ");
+                builder.append(p.getPret());
+                builder.append(".\n\n");
+            }
+        }
+
         builder.append("Produsele urmatoare sunt la super pret mai mic de 10 lei!!! \n");
         for (Produs p : produse) {
             if(p.getPret()<=10) {
@@ -41,6 +51,7 @@ public class Magazin {
                 builder.append(".\n");
             }
         }
+
 
         return builder.toString();
     }
