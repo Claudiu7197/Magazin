@@ -28,6 +28,11 @@ public class Produs implements Comparable<Produs>{
         return pret;
     }
 
+    public String getNume()
+    {
+        return nume;
+    }
+
     @Override
     public String toString()
     {
